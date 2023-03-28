@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <button class="backButton" onclick="Calculatrice.back()">Retour Arrière</button>
+
     <div class="containerCalculatrice">
         <div class="resultContainer">
             <div class="result">
@@ -27,7 +30,7 @@
                 <button onclick="Calculatrice.clickEvent(this)">2</button>
                 <button onclick="Calculatrice.clickEvent(this)">3</button>
                 <button onclick="Calculatrice.clickEvent(this)">0</button>
-                <button onclick="Calculatrice.clickEvent(this)" class="doubleBtn" style="background: #156ff6">.</button>
+                <button onclick="Calculatrice.clickEvent(this)" id="doubleBtn" style="background: #156ff6">.</button>
             </div>
             <div class="operationPart">
                 <button onclick="Calculatrice.clickEvent(this)">(</button>

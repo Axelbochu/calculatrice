@@ -2,10 +2,14 @@ class BaseCalculator{
     constructor(){
         this.inputCalc = document.querySelector(".inputCalc");
         this.result = document.querySelector(".resultH1");
+        this.historique = [];
     }
 
     clickEvent(button){
+        this.inputCalc.style.background = "#ffffff" //on remet la couleur d'erreur par default
         this.inputCalc.value = this.inputCalc.value + button.textContent;
+        //on ajoute à l'historique
+        this.historique.push(button.textContent);
     }
 
     resetCalc(){
@@ -29,6 +33,24 @@ class BaseCalculator{
         }
         else{ //sinon on affiche 0
             this.result.textContent = "0";
+        }
+    }
+
+    back(){
+        if(this.historique.length > 0){
+            //on supprime de l'historique le dernier element
+            this.historique.pop();
+            //on réafiche l'input
+            let tmp = "";
+            this.historique.forEach(e => {
+                tmp += e;
+            });
+            //on affecte
+            this.inputCalc.value = tmp;
+        }
+        else{
+            this.inputCalc.style.background = "#db38db";
+            alert("impossible de revenir en arriere");
         }
     }
 }

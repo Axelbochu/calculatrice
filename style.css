@@ -84,7 +84,7 @@ body{
     width: 40%;
 }
 
-button{
+.containerCalculatrice button{
     margin-right: 20px;
     height : 70px;
     width: 70px;
@@ -100,6 +100,14 @@ button:active{
     transform: translateY(4px);
 }
 
-.doubleBtn{
+#doubleBtn{
     width: 182px;
+}
+
+.backButton{
+    padding: 10px;
+    font-size: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: #dbbd38;
 }
